@@ -1,0 +1,268 @@
+$list:320px,360px,375px,384px,412px,414px,600px,640px,768px,800px,1280px,1440px,1600px;
+html{
+    font-size: 100px;
+}
+body{
+    font-size: 15px;
+    border: 0px;
+}
+*{
+    font-family: "微软雅黑";
+    box-sizing: border-box;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    
+}
+@font-face{
+    font-family: 'iconfont';
+    
+}
+.iconfont{
+    font-family: 'iconfont';
+}
+ul,li,ol,a{
+    text-decoration: none;
+    list-style: none;
+}
+$m:375px;
+@each $w in $list{
+    @media screen and (min-width:#{$w}){
+        html{
+            font-size: 100px * $w/$m;
+        }
+    }
+}
+
+.outsit-a{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    //  logo
+    .a{
+            width: 1.6rem;
+            height: 1.6rem;
+            background: #FFCB0C;
+            position: absolute;
+            top: -0.7rem;
+            left: -0.5;
+            transform: rotate(45deg);
+            z-index: 4;
+            .wen{
+                color: #fff;
+                position: fixed;
+                top: 0.9rem;
+                left: 0.5rem;
+                font-size: 25px;
+                transform: rotate(-45deg);
+            }
+        }
+//      侧滑
+        .b{
+            width: 1rem;
+            height: 0.4rem;
+            position: absolute;
+            right: 0;
+            top: 0.5rem;
+//          overflow: hidden;
+            z-index: 500;
+            .con-a{
+                width: 50%;
+                height: 100%;
+                float: left;
+                background: #FFCB0C;
+                color: #fff;
+                text-align: center;
+                line-height: 0.4rem;
+            }
+            .iconfont{
+                background: #5F6062;
+                color: #fff;
+            }
+            .cehua-a{
+                width: 2rem;
+                height: 3.6rem;
+                background: #5F6062;
+                position: absolute;
+                right: 0;
+                top: 100%;
+                z-index: 2;
+                opacity: 0;
+                transform: translateX(2rem);
+                transition: all 1s;
+                .list-a{
+                    width: 100%;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #6C6C6C;
+                    line-height: 0.6rem;
+                    .iconfont{
+                        color: #fff;
+                        float: left;
+                        margin-left: 0.25rem;
+                        font-size: 25px;
+                    }
+                    .list-b{
+                        float: left;
+                        color: #fff;
+                        margin-left: 0.2rem;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    .nav{
+            width: 100%;
+            height: 0.4rem;
+            background: rgba(102,102,102,0.2);
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 4;
+            .footer{
+                width: 25%;
+                height: 100%;
+                float: left;
+                text-align: center;
+                line-height: 0.4rem;
+                .aaa{
+                    color: #fff;
+                }
+                .iconfont{
+                    color: #fff;
+                    font-size: 25px;
+                    display: none;
+                }
+            }
+        } 
+//  电话
+        @keyframes dong-a{
+            from{
+                opacity: 0;
+                right: -1rem;
+            }
+            to{
+                opacity: 1;
+                right: 0.1rem;
+            }
+        }
+        .phone{
+            width: 0.5rem;
+            height: 1.5rem;
+            position: fixed;
+            right: 0.1rem;
+            bottom: 2rem;
+//          background: red;
+            color: #FFCB0C;
+            animation: dong-a 3s;
+            .iconfont{
+                display: block;
+                width: 0.5rem;
+                height: 0.5rem;
+                font-size: 50px;
+                margin-top: 0.2rem;
+            }
+        }
+//  one    
+    .one{
+        width: 100%;
+        height: 80%;
+//      background: red;
+        position: relative;
+        overflow: hidden;
+        .one-a{
+            height: 100%;
+//          width: 100%;
+//          transform: translateX(-2rem);
+            
+        }
+        .on{
+            width: 100%;
+            height: 0.4rem;
+            position: absolute;
+            left: 0;
+            bottom: 0.5rem;
+            text-align: center;
+            line-height: 0.5rem;
+            background: #fff;
+        }
+        .one-c{
+            position: absolute;
+            top: 38%;
+            left: 0.8rem;
+            font-size: 30px;
+            color: #fff;
+        }
+        .one-d{
+            position: absolute;
+            bottom: 48%;
+            left: 0.8rem;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+//  tow
+    .tow{
+        width: 98%;
+        height: 4.4rem;
+        margin-top: 0.5rem;
+        margin-left: 1%;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        .nei-a{
+            width: 100%;
+            height: 50%;
+            .tow-a{
+                height: 100%;
+            }
+        }
+        .nei-b{
+            width: 100%;
+            height: 50%;
+            .tow-b{
+                width: 100%;
+                height: 0.3rem;
+                padding-left: 1rem;
+                margin-top: 0.2rem;
+                line-height: 0.3rem;
+                font-size: 18px;
+                .tow-bb{
+                    width: 0.5rem;
+                    height: 100%;
+                    background: #FFCB0C;
+                    float: left;
+                    text-align: center;
+                    line-height: 0.3rem;
+                    color: #fff;
+                    font-size: 18px;
+                    margin-right: 0.2rem;
+                }
+            }
+            .tow-c,.tow-d{
+                text-align: center;
+                margin-top: 0.1rem;
+            }
+            .tow-e{
+                text-align: center;
+                line-height: 0.3rem;
+                width: 1rem;
+                height: 0.3rem;
+                background: #FFCB0C;
+                color: #FFFFFF;
+                margin: 0 auto;
+                margin-top: 0.2rem;
+            }
+        }
+        
+    }
+    .three{
+        margin-top: 0.05rem;
+    }
+    .six{
+        width: 100%;
+        height: 1rem;
+        background: #E6E6E6;
+        text-align: center;
+        line-height: 1rem;
+    }
+}
